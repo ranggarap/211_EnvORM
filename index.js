@@ -21,4 +21,7 @@ app.post('/komik', async (req, res) => {
   try {
     const komik = await db.Komik.create(data);
     res.send(komik);
-   
+    } catch (error) {
+        res.send(error);
+    }
+})
